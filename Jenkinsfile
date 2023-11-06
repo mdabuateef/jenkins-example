@@ -3,7 +3,8 @@ pipeline {
     tools {
         maven 'Maven'
     }
-    stage('Build') {
+    stages {
+        stage('Build') {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     withMaven {
@@ -12,5 +13,6 @@ pipeline {
                 }
             }
         }
+    }
 }
-    
+
