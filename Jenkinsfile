@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                     withMaven {
-                        sh 'mvn clean verify sonar:sonar'
+                        sh 'mvn clean verify'
                     }
                 }
             }
